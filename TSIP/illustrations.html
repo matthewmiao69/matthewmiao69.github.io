@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>The Sun Is Purple</title>
+      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"></script>
+   </head>
+   <body class="preload">
+      <input type="checkbox" id="check">
+      <!--header area start-->
+      <header>
+         <label for="check">
+         <i class="fas fa-bars" id="sidebar_btn"></i>
+         </label>
+         <div class="left_area">
+            <h3>Meow <span>Meow</span></h3>
+         </div>
+         <div class="right_area">
+            <a href="#" class="ocean_btn" style="margin-right:169px" onclick="Ocean()">Ocean</a>
+            <a href="#" class="default_btn" style="margin-right:238px" onclick="Default()">Default</a>
+            <a href="#" style="margin-right:113px;" class="dark_btn" onclick="Dark()">Dark</a>
+          </div>
+          <div>
+            <span class="themes">
+              <i href="#" class="fas fa-palette"  style="
+              float: right;
+              margin-top: -30px;
+              margin-right: 50px;
+              font-size: 30px;
+              padding-bottom: 30px;"></i>
+              <ul class="palette">
+                  <li class="colors" id="dark-blue" data-color="#2f323a"></li>
+                  <li class="colors" id="blue" data-color="#2980b9"></li>
+                  <li class="colors" id="red" data-color="#c0392b"></li>
+                  <li class="colors" id="purple" data-color="#8e44ad"></li>
+                  <li class="colors" id="orange" data-color="#d35400"></li>
+                  <li class="colors" id="green" data-color="#27ae60"></li>
+              </ul>
+            <span>
+          </div>
+        </header>
+        <!--header area end-->
+        <!--mobile navigation bar start-->
+        <div class="mobile_nav">
+          <div class="nav_bar">
+            <img src="Circle.png" class="mobile_profile_image" alt="">
+            <a href="#" class="ocean_btn_mobile"  onclick="Ocean()">Ocean</a>
+            <a href="#" class="default_btn_mobile"  onclick="Default()">Default</a>
+            <a href="#" class="dark_btn_mobile" onclick="Dark()">Dark</a>
+            <i class="fa fa-bars nav_btn"></i>
+          </div>
+         <div class="mobile_nav_items">
+            <a href="#"><span>Menu</span></a>
+            <a href="index.html"><span>Home</span></a>
+            <a href="blog.html"><span>Blog</span></a>
+            <a href="illustrations.html"><span>Illustrations</span></a>
+            <a href="about.html"><span>About Us</span></a>
+            <a href="games.html"><span>Games</span></a>
+            <a href="quotes.html"><span>Quotes</span></a>
+            <a href="search.html"><span>Search</span></a>
+         </div>
+      </div>
+      <!--mobile navigation bar end-->
+      <!--sidebar start-->
+      <div class="sidebar">
+         <div class="profile_info">
+            <img src="Circle.png" class="profile_image" alt="">
+            <h4>The Sun Is Purple</h4>
+         </div>
+         <a href="#"><span>Menu</span></a>
+         <a href="index.html"><span>Home</span></a>
+         <a href="blog.html"><span>Blog</span></a>
+         <a href="illustrations.html"><span>Illustrations</span></a>
+         <a href="about.html"><span>About Us</span></a>
+         <a href="games.html"><span>Games</span></a>
+         <a href="quotes.html"><span>Quotes</span></a>
+         <a href="search.html"><span>Search</span></a>
+      </div>
+      <!--sidebar end-->
+      <style>
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/* flexing stuff */
+         .flextime3{
+         display:flex;
+         justify-content: space-around;
+         /* flex-wrap: wrap; */
+         flex-flow: row wrap;
+         }
+         .flextime3::after {
+            content: "";
+            flex: auto;
+          }
+         div.gallery {
+         margin: 5px;
+         border: 2px solid #ccc;
+         float: left;
+         width: 180px;
+         background: white;
+         padding:0px;
+         height:min-content;
+         }
+         div.gallery:hover {
+         border: 2px solid rgba(144, 114, 216, 0.589);
+         }
+         div.gallery img {
+         width: 100%;
+         height: auto;
+         }
+         div.desc {
+         padding: 15px;
+         text-align: center;
+         color:black;
+         font-size:16px;
+         }
+
+         /* modal */
+
+         #myImg {
+         border-radius: 5px;
+         cursor: pointer;
+         transition: 0.3s;
+         }
+         /* The Modal (background) */
+         .modal {
+         display: none; /* Hidden by default */
+         position: fixed; /* Stay in place */
+         z-index: 1; /* Sit on top */
+         padding-top: 100px; /* Location of the box */
+         left: 0;
+         top: 0;
+         width: 100%; /* Full width */
+         height: 100%; /* Full height */
+         overflow: auto; /* Enable scroll if needed */
+         background-color: rgb(0,0,0); /* Fallback color */
+         background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+         }
+         /* Modal Content (Image) */
+         .modal-content {
+         margin: auto;
+         display: block;
+         width: 80%;
+         max-width: 700px;
+         }
+         /* Caption of Modal Image (Image Text) - Same Width as the Image */
+         #caption {
+         margin: auto;
+         display: block;
+         width: 80%;
+         max-width: 700px;
+         text-align: center;
+         color: #ccc;
+         padding: 10px 0;
+         height: 150px;
+         font-size: large;
+         }
+         /* Add Animation - Zoom in the Modal */
+         .modal-content, #caption {
+         animation-name: zoom;
+         animation-duration: 0.6s;
+         }
+         @keyframes zoom {
+         from {transform:scale(0)}
+         to {transform:scale(1)}
+         }
+         /* The Close Button */
+         .close {
+         position: absolute;
+         top: 15px;
+         right: 35px;
+         color: #f1f1f1;
+         font-size: 40px;
+         font-weight: bold;
+         transition: 0.3s;
+         }
+         .close:hover,
+         .close:focus {
+         color: #bbb;
+         text-decoration: none;
+         cursor: pointer;
+         }
+         /* 100% Image Width on Smaller Screens */
+         @media only screen and (max-width: 700px){
+         .modal-content {
+         width: 100%;
+         }
+         }
+      </style>
+      <div class="content">
+         <!-- The Modal -->
+         <div id="myModal" class="modal">
+            <!-- The Close Button -->
+            <span class="close">&times;</span>
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="img01">
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+         </div>
+         <div>
+            <h1 style=" padding-top:80px;">mashu</h1>
+            <div class="flextime3">
+               <div class="gallery">
+                  <a target="_blank" >
+                  <img id="m8" src="illustrations/download (6).jpg" alt="mob" onclick = "clicked(m8)">
+                  </a>
+               </div>
+               <div class="gallery">
+                  <a target="_blank">
+                  <img id="myImg5" src="illustrations/download (7).jpg" alt="" onclick = "clicked(myImg5)">
+                  </a>
+               </div>
+               <div class="gallery">
+                  <a target="_blank" >
+                  <img id="myImg6" src="illustrations/download (8).jpg" onclick = "clicked(myImg6)">
+                  </a>
+               </div>
+               <div class="gallery">
+                  <a target="_blank" >
+                  <img id="m4" src="illustrations/m4.jpg" onclick = "clicked(m4)">
+                  </a>
+               </div>
+               <div class="gallery">
+                  <a target="_blank" >
+                  <img id="m5" src="illustrations/m5.jpg" onclick = "clicked(m5)">
+                  </a>
+               </div>
+               <div class="gallery">
+                  <a target="_blank" >
+                  <img id="m6" src="illustrations/m6.jpg" onclick = "clicked(m6)">
+                  </a>
+               </div>
+               <div class="gallery">
+                  <a target="_blank" >
+                  <img id="m7" src="illustrations/m7.jpg" onclick = "clicked(m7)">
+                  </a>
+               </div>
+               <div class="gallery">
+                  <a target="_blank" >
+                  <img id="m9" src="illustrations/download (6) - Copy.jpg" onclick = "clicked(m9)">
+                  </a>
+               </div>
+            </div>
+            <div>
+
+               <h1> mya!</h1>
+               
+               <div class="flextime3">
+                  <div class="gallery">
+                     <a target="_blank" href="">
+                     <img id="j2" src="illustrations/download (1).jpg" onclick = "clicked(j2)" >
+                     </a>
+                  </div>
+                  <div class="gallery">
+                     <a target="_blank">
+                     <img id="myImg" src="illustrations/download (2).jpg" alt="rising text" >
+                     </a>
+                  </div>
+                  <div class="gallery">
+                     <a target="_blank" >
+                     <img id="myImg2" src="illustrations/download (3).jpg" onclick = "clicked(myImg2)">
+                     </a>
+                  </div>
+                  <div class="gallery">
+                     <a target="_blank" >
+                     <img src="illustrations/download.jpg" alt="cat" width="600" height="400"  id="myImg3" onclick = "clicked(myImg3)">
+                     </a>     
+                  </div>
+                  <div class="gallery">
+                     <a target="_blank" >
+                     <img src="illustrations/download (5).jpg" alt="cat" width="600" height="400"  id="myImg4" onclick = "clicked(myImg4)">
+                     </a>
+                  </div>
+                  <div class="gallery">
+                     <a target="_blank" >
+                     <img src="illustrations/download (4).jpg"  width="600" height="400"  id="j1" onclick = "clicked(j1)">
+                     </a>
+                  </div>
+                  <div class="gallery">
+                     <a target="_blank" >
+                     <img src="illustrations/j6.jpg"  width="600" height="400"  id="j6" onclick = "clicked(j6)">
+                     </a>
+                  </div>
+                  <div class="gallery">
+                    <a target="_blank" >
+                    <img src="illustrations/j7.jpg"  width="600" height="400"  id="j7" onclick = "clicked(j7)">
+                    </a>
+                 </div>
+                 <div class="gallery">
+                  <a target="_blank" >
+                  <img src="illustrations/j8.jpg"  width="600" height="400"  id="j8" onclick = "clicked(j8)">
+                  </a>
+               </div>
+               <div class="gallery">
+                <a target="_blank" >
+                <img src="illustrations/j9.jpg"  width="600" height="400"  id="j9" onclick = "clicked(j9)">
+                </a>
+             </div>
+             <div class="gallery">
+              <a target="_blank" >
+              <img src="illustrations/ily senkoo.PNG"  width="600" height="400"  id="senk" onclick = "clicked(senk)">
+              </a>
+           </div>
+               </div>
+            </div>
+            <script>
+               // Get the modal
+               var modal = document.getElementById("myModal");
+               
+               // Get the image and insert it inside the modal - use its "alt" text as a caption
+               var img = document.getElementById("myImg");
+               
+               
+               
+               var modalImg = document.getElementById("img01");
+               var captionText = document.getElementById("caption");
+               img.onclick = function(){
+               modal.style.display = "block";
+               modalImg.src = this.src;
+               captionText.innerHTML = this.alt;
+               }
+               
+               
+               
+               function clicked(myImgId){
+               modal.style.display = "block";
+               modalImg.src = myImgId.src;
+               captionText.innerHTML = myImgId.alt;
+               
+               }
+               
+               // Get the <span> element that closes the modal
+               var span = document.getElementsByClassName("close")[0];
+               
+               // When the user clicks on <span> (x), close the modal
+               span.onclick = function() {
+               modal.style.display = "none";
+               }
+            </script>
+         </div>
+      </div>
+      <footer>
+         <ul>
+            <!-- <li><a href="#" class="social twitter">Twitter</a></li> -->
+            <!-- <li><a href="#" class="social linkedin">LinkedIn</a></li> -->
+            <li><a href="#" class="social github">Github</a></li>
+            <li><a href="https://tsiphq.wordpress.com/" class="social wordpress">Wordpress</a></li>
+            <li><a href="#" class="social instagram">Instagram</a></li>
+         </ul>
+         <p class="copyright">&copy; 2021, The Sun Is Purple</p>
+      </footer>
+      <script type="text/javascript">
+         $(document).ready(function(){
+           $('.nav_btn').click(function(){
+             $('.mobile_nav_items').toggleClass('active');
+           });
+         });
+      </script>
+      <script src="jsfile.js">
+            // second shot at themse
+      </script>
+   </body>
+</html>

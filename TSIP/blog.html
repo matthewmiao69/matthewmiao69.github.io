@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sun Is Purple</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"></script>
+  </head>
+  <body class="preload">
+    <input type="checkbox" id="check">
+    <!--header area start-->
+    <header>
+      <label for="check">
+        <i class="fas fa-bars" id="sidebar_btn"></i>
+      </label>
+      <div class="left_area">
+        <h3>Meow <span>Meow</span></h3>
+      </div>
+      <div class="right_area">
+        <a href="#" class="ocean_btn" style="margin-right:169px" onclick="Ocean()">Ocean</a>
+        <a href="#" class="default_btn" style="margin-right:238px" onclick="Default()">Default</a>
+        <a href="#" style="margin-right:113px;" class="dark_btn" onclick="Dark()">Dark</a>
+      </div>
+      <div>
+        <span class="themes">
+          <i href="#" class="fas fa-palette"  style="
+          float: right;
+          margin-top: -30px;
+          margin-right: 50px;
+          font-size: 30px;
+          padding-bottom: 30px;"></i>
+          <ul class="palette">
+              <li class="colors" id="dark-blue" data-color="#2f323a"></li>
+              <li class="colors" id="blue" data-color="#2980b9"></li>
+              <li class="colors" id="red" data-color="#c0392b"></li>
+              <li class="colors" id="purple" data-color="#8e44ad"></li>
+              <li class="colors" id="orange" data-color="#d35400"></li>
+              <li class="colors" id="green" data-color="#27ae60"></li>
+          </ul>
+        <span>
+      </div>
+    </header>
+    <!--header area end-->
+    <!--mobile navigation bar start-->
+    <div class="mobile_nav">
+      <div class="nav_bar">
+        <img src="Circle.png" class="mobile_profile_image" alt="">
+        <a href="#" class="ocean_btn_mobile"  onclick="Ocean()">Ocean</a>
+        <a href="#" class="default_btn_mobile"  onclick="Default()">Default</a>
+        <a href="#" class="dark_btn_mobile" onclick="Dark()">Dark</a>
+        <i class="fa fa-bars nav_btn"></i>
+      </div>
+      <div class="mobile_nav_items">
+        <a href="#"><span>Menu</span></a>
+        <a href="index.html"><span>Home</span></a>
+        <a href="blog.html"><span>Blog</span></a>
+        <a href="illustrations.html"><span>Illustrations</span></a>
+        <a href="about.html"><span>About Us</span></a>
+        <a href="games.html"><span>Games</span></a>
+        <a href="quotes.html"><span>Quotes</span></a>
+        <a href="search.html"><span>Search</span></a>
+      </div>
+    </div>
+    <!--mobile navigation bar end-->
+    <!--sidebar start-->
+    <div class="sidebar">
+      <div class="profile_info">
+        <img src="Circle.png" class="profile_image" alt="">
+        <h4>The Sun Is Purple</h4>
+      </div>
+      <a href="#"><span>Menu</span></a>
+      <a href="index.html"><span>Home</span></a>
+      <a href="blog.html"><span>Blog</span></a>
+      <a href="illustrations.html"><span>Illustrations</span></a>
+      <a href="about.html"><span>About Us</span></a>
+      <a href="games.html"><span>Games</span></a>
+      <a href="quotes.html"><span>Quotes</span></a>
+      <a href="search.html"><span>Search</span></a>
+    </div>
+    <!--sidebar end-->
+
+    <div class="content" style="padding-bottom:0px;">
+      <div class = "banner">
+      </div>
+    <!-- <img src="images/temp_house.png" alt="Matthew Lin God of Sex" class="banner"> -->
+      <h1>Blog</h1><br>
+      <h2>Latest Articles</h2><br>
+    </div>
+    <div class="directory_parent" id="div1">
+      <div class="directory" >
+        <img src="images/blog_imgs/anger.png" class="img">
+        <h2 class="right">The necessity of anger</h2>
+        <p class="right">A philosophical “Essay” on the necessity of anger for a human being. Me.
+          Is anger necessary? Is anger good, neutral, bad, positive, negative or a neutral emotion? In modern day society what is the current consensus on the emotion of anger? What are the merits and demerits of anger if ...<br> <a href="articles/the_necessity_of_anger.html">click here</a> to read more.
+        </p>
+      </div>
+    </div>
+    <div class="directory_parent" style="background: #f2f2f2;" id="div2">
+      <div class="directory" >
+        <img src="images/blog_imgs/hello.jpg" class="img">
+        <h2 class="right">Hello</h2>
+        <p class="right">Hello,<br>
+          Hello, <br>
+          Hello,<br>
+          Can you hear me?<br>
+          Are my words managing to seep out?<br>
+          ... <a href="articles/hello.html">click here</a> to read more.
+        </p>
+      </div>
+    </div>
+    <div class="directory_parent" id="div3">
+      <div class="directory" >
+        <img src="images/blog_imgs/the_dream.jpg" class="img">
+        <h2 class="right">The dream</h2>
+        <p class="right">I have seen the world<br><br>
+
+          I have dived into the pits of hell<br>
+          turning and weaving whilst those doomed<br>
+          smile and wave along<br>
+          desperately trying to pull me down.<br>
+          But without fail, I rise every time. <br>
+          ...
+           <a href="articles/the_dream.html">click here</a> to read more.
+        </p>
+      </div>
+    </div>
+    <div class="directory_parent" style="background: #f2f2f2;"id="div4">
+      <div class="directory" >
+        <img src="images/blog_imgs/As_much_polish_as_8_unproductive_days_will_get_you.jpg" class="img">
+        <h2 class="right">As much polish as 8 unproductive days will get you</h2>
+        <p class="right">Its full of grammatical errors. 
+          rozstrzygnąłem że będę uczył się języka polskiego. Bo polska część piosenki jest dobra. język irlandzki nudzi mnie. Bo podręcznik nie był bardzo dobry, był zbyt szybki. Nie ma wielu. Zaskakująco, pisownia jest regularna. Albo  rodzaj męski i rodzaj żeński jest przeciwległe. Też pięć deklinacje jest bardzo wiele. Więc rzuciłem. Jestem zbyt powolny a leniwy...
+<br> <a href="articles/As_much_polish_as_8_unproductive_days_will_get_you.html">click here</a> to read more.
+        </p>
+      </div>
+    </div>
+    <div class="directory_parent" id="div5">
+      <div class="directory">
+        <img src="images/blog_imgs/A_puff_of_smoke.jpg" class="img">
+        <h2 class="right">A puff of smoke</h2>
+        <p class="right">I am born as the match strikes the box. Sparks fly, smoke curls in tight spirals, as I leap out into a world of darkness. As the fumes dissipate, wafting through the air in carefree ecstasy, I explode in a parade of flames. I am fire, newly born; easily vanquished with a puff of air, but deadly if uncared for. I bring life, cure death and fight against the insane suffocation of darkness, but it all comes at a price: Feed me. ...<br> <a href="articles/A_puff_of_smoke.html">click here</a> to read more.
+        </p>
+      </div>
+    </div>
+      <!-- <h2>Latest Articles</h2>
+      <br>
+      <h3>The necessity of anger</h3><br>
+      <p>A philosophical “Essay” on the necessity of anger for a human being. Me.
+
+        Is anger necessary? Is anger good, neutral, bad, positive, negative or a neutral emotion? In modern day society what is the current consensus on the emotion of anger? What are the merits and demerits of anger if ...<br> <a href="the necessity of anger.html">click here</a> to read more</p> -->
+
+    <footer>
+      <ul>
+        <!-- <li><a href="#" class="social twitter">Twitter</a></li> -->
+        <!-- <li><a href="#" class="social linkedin">LinkedIn</a></li> -->
+        <li><a href="#" class="social github">Github</a></li>
+        <li><a href="https://tsiphq.wordpress.com/" target="_blank" class="social wordpress">Wordpress</a></li>
+        <li><a href="#" class="social instagram">Instagram</a></li>
+      </ul>
+      <p class="copyright">&copy; 2021, The Sun Is Purple</p>
+    </footer>
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $('.nav_btn').click(function(){
+        $('.mobile_nav_items').toggleClass('active');
+      });
+    });
+    </script>
+    <script src="jsfile.js">
+      // second shot at themse
+      
+    </script>
+  </body>
+</html>
