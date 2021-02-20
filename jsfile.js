@@ -18,6 +18,24 @@ for (i=0;i<colors.length;i++)(
     colors[i].addEventListener('click',changecolor)
 
 )
+// function OpenPalette(){
+//     if(document.getElementById("palette").style. = "transparent")
+// }
+
+var paletteOpen = 0;
+function togglePalette(){
+    if(window.innerWidth <= 600){
+        if(paletteOpen=0){
+            document.getElementById("palette").style.display = "block";
+            paletteOpen = 1;
+        }
+        else{
+            document.getElementById("palette").style.display = "none";
+            paletteOpen = 0;
+        };
+
+    };
+};
 
 function changecolor(){
     let color= this.getAttribute('data-color');
