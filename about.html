@@ -7,12 +7,10 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js">
-    
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
-  <body class="preload">
+  <body id="body" class="preload" >
     <input type="checkbox" id="check">
     <!--header area start-->
     <header>
@@ -20,7 +18,7 @@
         <i class="fas fa-bars" id="sidebar_btn"></i>
       </label>
       <div class="left_area">
-        <h3>Meow <span>Meow</span></h3>
+        <h3><a href="index.html" class="meow">Meow <span>Meow</span></a></h3>
       </div>
       <div class="right_area">
         <a href="#" class="ocean_btn" style="margin-right:169px" onclick="Ocean()">Ocean</a>
@@ -29,13 +27,33 @@
       </div>
       <div>
         <span class="themes">
-          <i href="#" class="fas fa-palette" onclick = "togglePalette()" style="
+          <i href="#"  class="fas fa-palette" onclick=' 
+          
+          
+          
+              
+        
+        if(             document.getElementById("palette").style.display === "none"){
+          
+            document.getElementById("palette").style.display = "block"; 
+            
+        }else{
+           
+            document.getElementById("palette").style.display = "none";
+           
+          
+        };
+
+          
+          
+          
+          '  style="
           float: right;
           margin-top: -30px;
           margin-right: 50px;
           font-size: 30px;
           padding-bottom: 30px;"></i>
-          <ul class="palette">
+          <ul class="palette" id="palette" style="display:none;">
               <li class="colors" id="dark-blue" data-color="#2f323a"></li>
               <li class="colors" id="blue" data-color="#2980b9"></li>
               <li class="colors" id="red" data-color="#c0392b"></li>
@@ -57,7 +75,6 @@
         <i class="fa fa-bars nav_btn"></i>
       </div>
       <div class="mobile_nav_items">
-        <a href="Circle.png"><span>Menu</span></a>
         <a href="index.html"><span>Home</span></a>
         <a href="blog.html"><span>Blog</span></a>
         <a href="illustrations.html"><span>Illustrations</span></a>
@@ -72,9 +89,8 @@
     <div class="sidebar">
       <div class="profile_info">
         <img src="Circle.png" class="profile_image" alt="">
-        <h4>The Sun Is Purple</h4>
+        <h4>The <span>Sun</span> Is Purple</h4>
       </div>
-      <a href="#"><span>Menu</span></a>
       <a href="index.html"><span>Home</span></a>
       <a href="blog.html"><span>Blog</span></a>
       <a href="illustrations.html"><span>Illustrations</span></a>

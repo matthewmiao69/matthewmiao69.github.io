@@ -52,7 +52,10 @@ header{
 .left_area span{
   color: #19B3D3;
 }
-
+.meow{
+  text-decoration: none;
+  color: white;
+}
 .default_btn{
   padding: 5px;
   background: #19B3D3;
@@ -544,13 +547,13 @@ a.social:hover {
   cursor:pointer;
   color:#19B3D3;
 }
-.themes:hover{
+/* .themes:hover{
   color: #fff;
   transition:0.4s;
-}
-.themes:hover ul{
+} */
+/* .themes:hover ul{
   display:block;
-}
+} */
 .colors{
   list-style:none;
   width:30px;

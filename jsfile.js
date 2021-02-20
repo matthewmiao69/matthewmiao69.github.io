@@ -9,6 +9,10 @@ var div5 = document.getElementById("div5");
 const colors = document.getElementsByClassName('colors');
 const currentTheme = localStorage.getItem("theme");
 document.documentElement.style.setProperty('--color',currentTheme);
+if (currentbodyTheme == "default") {
+    Default.call()
+}
+document.documentElement.style.setProperty('--color',currentTheme);
 $(window).on('load', function(){
     $("body").removeClass("preload");
     $(".preload").removeClass("preload");
@@ -18,39 +22,59 @@ for (i=0;i<colors.length;i++)(
     colors[i].addEventListener('click',changecolor)
 
 )
+if (currentbodyTheme == "ocean") {
+    Ocean.call();
+}
+if (currentbodyTheme == "dark") {
+    Dark.call();
+}
+
 // function OpenPalette(){
 //     if(document.getElementById("palette").style. = "transparent")
 // }
 
-var paletteOpen = 0;
-function togglePalette(){
-    if(window.innerWidth <= 600){
-        if(paletteOpen=0){
-            document.getElementById("palette").style.display = "block";
-            paletteOpen = 1;
-        }
-        else{
-            document.getElementById("palette").style.display = "none";
-            paletteOpen = 0;
-        };
+// var paletteOpen = '0';
+// function togglePalette(){
+    
+        // alert("functin called");
+        // if(             document.getElementById("palette").style.display === "none";){
+        //     alert("palette open pending");
+        //     document.getElementById("palette").style.display = "block"; 
+        //     alert("middle");
+        //     paletteOpen = '1';
+        //     alert("palette opened");
+        // }
+        // else{
+        //     alert("palette closed pending");
+        //     document.getElementById("palette").style.display = "none";
+        //     paletteOpen = '0';
+        //     alert("palette closed done");
+        // };
 
-    };
-};
+    
+// };
+
+           
+// function togglePalette(){        
+// if(             document.getElementById("palette").style.display === "none"){
+          
+//     document.getElementById("palette").style.display = "block"; 
+    
+// }else{
+   
+//     document.getElementById("palette").style.display = "none";
+   
+  
+// };
+// };
+
 
 function changecolor(){
     let color= this.getAttribute('data-color');
     document.documentElement.style.setProperty('--color',color);
     localStorage.setItem("theme", color);
 }
-if (currentbodyTheme == "ocean") {
-    Ocean.call();
-}
-if (currentbodyTheme == "default") {
-    Default.call();
-}
-if (currentbodyTheme == "dark") {
-    Dark.call();
-}
+
 
 
 function Ocean(){
@@ -81,8 +105,6 @@ localStorage.setItem("body-theme", "ocean");
 }
 
 function Default(){
-document.documentElement.style.setProperty('--color',"#2f323a"); 
-localStorage.setItem("theme", "#2f323a");
 if(div1){
     document.getElementById("div1").style.backgroundColor = "transparent";
 
@@ -114,7 +136,6 @@ if(div4){
 document.body.style.animation = "none";
 localStorage.setItem("body-theme", "default");
 }
-
 function Dark(){
 
     document.body.style.background = "0";
